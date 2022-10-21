@@ -6,34 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cydni Turner</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!----  <LINK href="styles.css" rel="stylesheet" type="text/css" -->
 </head>
 
 <body>
 
-  <nav class="navbar">
-    <div class="icon-placeholder"></div>
-    <ul class="nav-list" id="nav-list">
-      <li class="list-item">
-        <a href="#">About</a>
-      </li>
-
-      <li class="list-item">
-        <a href="#">Education</a>
-      </li>
-
-      <li class="list-item">
-        <a href="#">Experience</a>
-      </li>
-    </ul>
-
-    <div class="menu" id="toggle-button">
-      <div class="menu-line"></div>
-      <div class="menu-line"></div>
-      <div class="menu-line"></div>
-
-    </div>
-  </nav>
+  <div class="navbar" id="navbar">
+    <a href="#about" class="active">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="javascript:void(0);" class="icon" onclick="openBurger()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
 
  <!-- <div class="landing">
 
@@ -48,11 +34,13 @@
 
 </body>
 <script>
-  const toggleButton = document.getElementById('toggle-button');
-  const naviList = document.getElementById('nav-list');
-  
-  toggleButton.addEventListener('click', () => {
-    naviList.classList.toggle('active');
-  })
+function openBurger() {
+  var x = document.getElementById("navbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
 </script>
 </html>

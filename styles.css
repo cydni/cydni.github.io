@@ -16,78 +16,57 @@ h1{
 
 .navbar{
   background-color: #333333;
-  color: white;
-  display: flex;
-  font-size: 20px;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.nav-list{
-  list-style-type: none;
-}
-
-.nav-list .list-item{
-
-  display: inline-block;
-  padding: 20px 10px;
+  overflow: hidden;
 }
 
 .navbar a{
-  color:white;
+  float:left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .navbar a:hover{
-  color:#FFD801;
+  background-color:#FFD801;
+  color: black;
 }
 
-.menu{
+.navbar a.active{
+  background-color: #545454;
+  color: white;
+}
+
+.navbar .icon {
   display: none;
 }
 
-.menu-line{
-  width: 20px;
-  height:3px;
-  background-color: white;
-  margin-bottom: 4px;
-}
-
-.icon-placeholder{
-
-  height: 45px;
-  width: 100%;
-  
-}
-
-@media all and (max-width : 480px){
-  .navbar{
-    flex-direction: column;
-    position: relative;
-  }
-
-  .menu{
+@media screen and (max-width: 600px) {
+  .navbar a{display: none;}
+  .navbar a.icon {
+    float: right;
     display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive a.icon {
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 0;
+    top: 0;
   }
-
-  .nav-list .list-item{
+  .navbar.responsive a {
+    float: none;
     display: block;
-    border-top: 1px solid white;
-    padding: 10px;
-  }
-
-  .nav-list{
-    width: 100%;
-    text-align: center;
-   
-    display: none;
-  }
-
-  .active{
-    display:block;
+    text-align: left;
   }
 
 }
+
+
+
+
+
