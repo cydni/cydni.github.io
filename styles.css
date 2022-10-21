@@ -3,15 +3,91 @@
   padding:0px;
 }
 
-#octocat {
-  display: block;
-  width:384px;
-  margin: 50px auto;
-}
-
 p {
   display: block;
   width: 400px;
   margin: 50px auto;
   font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+}
+
+h1{
+  color:#FFD801;
+}
+
+.navbar{
+  background-color: #333333;
+  color: white;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-list{
+  list-style-type: none;
+}
+
+.nav-list .list-item{
+
+  display: inline-block;
+  padding: 20px 10px;
+}
+
+.navbar a{
+  color:white;
+  text-decoration: none;
+}
+
+.navbar a:hover{
+  color:#FFD801;
+}
+
+.menu{
+  display: none;
+}
+
+.menu-line{
+  width: 20px;
+  height:3px;
+  background-color: white;
+  margin-bottom: 4px;
+}
+
+.icon-placeholder{
+
+  height: 45px;
+  width: 100%;
+  
+}
+
+@media all and (max-width : 480px){
+  .navbar{
+    flex-direction: column;
+    position: relative;
+  }
+
+  .menu{
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  .nav-list .list-item{
+    display: block;
+    border-top: 1px solid white;
+    padding: 10px;
+  }
+
+  .nav-list{
+    width: 100%;
+    text-align: center;
+   
+    display: none;
+  }
+
+  .active{
+    display:block;
+  }
+
 }

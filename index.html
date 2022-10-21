@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cydni Turner</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="styles.css">
+<!----  <LINK href="styles.css" rel="stylesheet" type="text/css" -->
 </head>
 
 <body>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+  <nav class="navbar">
+    <div class="icon-placeholder"></div>
+    <ul class="nav-list" id="nav-list">
+      <li class="list-item">
+        <a href="#">About</a>
+      </li>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
-<p>Yo</p>
+      <li class="list-item">
+        <a href="#">Education</a>
+      </li>
+
+      <li class="list-item">
+        <a href="#">Experience</a>
+      </li>
+    </ul>
+
+    <div class="menu" id="toggle-button">
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+
+    </div>
+  </nav>
+
+ <!-- <div class="landing">
+
+    <h1>hello.</h1>
+    <h3>i'm Cydni</h3>
+
+    <button type="button" class="btn btn-outline-dark">Download CV</button>
+    <button type="button" class="btn btn-outline-dark">Contact</button>
+  </div> -->
+
+
 
 </body>
+<script>
+  const toggleButton = document.getElementById('toggle-button');
+  const naviList = document.getElementById('nav-list');
+  
+  toggleButton.addEventListener('click', () => {
+    naviList.classList.toggle('active');
+  })
+</script>
 </html>
