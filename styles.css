@@ -13,6 +13,7 @@
   --secondary-shadow: #a17a69;
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
+  --top-margin: 1rem;
   --line-height: 1.7rem;
   --transition: 0.3s;
 }
@@ -101,6 +102,7 @@ nav ul li {
 .hero img {
   height: 37.5rem;
   width: 37.5rem;
+  margin-top: var(--top-margin);
 }
 
 .bio {
