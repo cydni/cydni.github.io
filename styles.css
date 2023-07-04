@@ -7,7 +7,7 @@
   --bold-font: 700;
   --bolder-font: 900;
   --bg-color: #fcfcfc;
-  --primary-color: ##ffca28;
+  --primary-color: #ffca28;
   --secondary-color: #000000;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
@@ -69,7 +69,6 @@ nav a {
 }
 nav a:hover {
   color: var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
 }
 
 nav ul {
