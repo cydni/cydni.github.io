@@ -89,6 +89,16 @@ nav ul li {
   cursor: pointer;
   display: none;
 }
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
+}
+
 .hero img {
   height: 37.5rem;
   width: 37.5rem;
