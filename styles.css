@@ -126,8 +126,7 @@ nav ul li {
   display: flex;
   align-items: center;
   gap: 2.5rem;
-  padding: 1rem 6rem;
-  margin-top: 8rem;
+  padding: 5rem 6rem;
   margin: auto;
   font-size: x-large;
 }
