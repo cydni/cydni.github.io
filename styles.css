@@ -126,11 +126,17 @@ nav ul li {
   display: flex;
   align-items: center;
   padding: 1rem 6rem;
+  margin-top: var(--top-margin-2);
 }
 
 .more-about h2 {
   margin-bottom: var(--bottom-margin);
   text-align: center;
+}
+
+.more-about img{
+  height: 37.5rem;
+  width: 37.5rem;
 }
 
 .more-about p {
