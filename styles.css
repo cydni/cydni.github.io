@@ -125,8 +125,10 @@ nav ul li {
 .more-about {
   display: flex;
   align-items: center;
+  gap: 2.5rem;
   padding: 1rem 6rem;
   margin-top: var(--top-margin-2);
+  margin: auto;
 }
 
 .more-about h2 {
@@ -135,8 +137,8 @@ nav ul li {
 }
 
 .more-about img{
-  height: 37.5rem;
-  width: 37.5rem;
+  height: 30.5rem;
+  width: 30.5rem;
 }
 
 .more-about p {
