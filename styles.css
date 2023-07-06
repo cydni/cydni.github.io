@@ -127,8 +127,9 @@ nav ul li {
   align-items: center;
   gap: 2.5rem;
   padding: 1rem 6rem;
-  margin-top: var(--top-margin-2);
+  margin-top: 8rem;
   margin: auto;
+  font-size: x-large;
 }
 
 .more-about h2 {
@@ -144,7 +145,6 @@ nav ul li {
 .more-about p {
   line-height: var(--line-height);
   padding: 0.4rem;
-  font-size: x-large;
 }
 
 .contact {
