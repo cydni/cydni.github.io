@@ -146,6 +146,26 @@ nav ul li {
   padding: 0.4rem;
 }
 
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+
 .contact {
   margin-top: var(--top-margin-2);
 }
@@ -222,6 +242,13 @@ footer {
   cursor: pointer;
 }
 
+#scroll-up{
+  z-index: 1;
+}
+
+#scroll-up:hover{
+  opacity:0;
+}
 .up-arrow {
   width: 3rem;
   height: 3rem;
