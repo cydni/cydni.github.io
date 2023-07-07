@@ -146,6 +146,25 @@ nav ul li {
   padding: 0.4rem;
 }
 
+.experience {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 6rem 6rem;
+  margin: auto;
+  font-size: x-large;
+}
+
+.experience h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.experience p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+
 .skills {
   max-width: 68.75rem;
   margin: auto;
