@@ -150,10 +150,9 @@ nav ul li {
   display: flex;
   align-items: center;
   gap: 2.5rem;
-  padding: 6rem 6rem;
+  padding: 3rem 6rem;
   margin: auto;
   font-size: x-large;
-  color: red;
 }
 
 .experience h2 {
