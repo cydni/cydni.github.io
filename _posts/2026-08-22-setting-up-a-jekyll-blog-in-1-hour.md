@@ -1,6 +1,6 @@
 ---
 title: "Setting Up a Jekyll Blog in 1 Hour"
-date: 2026-08-21
+date: 2026-08-22 12:00:00 -0500
 categories: [Jekyll, blog]
 tags: [Jekyll, blog]
 ---
@@ -15,7 +15,7 @@ First, the fun part: pick a theme. There are plenty of nice (free) Jekyll themes
 When you find a theme you like, clone the github repository into a new project. Name the project ``` your-username.github.io```. 
 
 ## Dependency Installation
-
+Install Ruby and Jekyll following the instructions in [this guide](https://jekyllrb.com/docs/installation/). 
 
 ```
 ```
