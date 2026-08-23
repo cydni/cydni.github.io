@@ -1,5 +1,5 @@
 ---
-title: "Setting Up a Jekyll Blog With Custom Domain in 1 Hour"
+title: "Setting Up a Jekyll Blog With a Custom Domain in 1 Hour"
 date: 2026-08-22 12:00:00 -0500
 categories: [Jekyll, blog]
 tags: [Jekyll, blog]
@@ -31,7 +31,11 @@ When the commands finish executing, look for the local server address where your
 Open your local copy of the project in your favorite IDE and open `_config.yml`. Change the title, tagline, and description to whatever you'd like for your blog. In the _social_ section, set your name and email. Set the url to `https://username.github.io`. 
 
 ```yml
+title: Your Blog Title
+tagline: Your blog tagline.
+description: Your blog description.
 
+url: "http://username.github.io"
 ```
 
 For your first blog post, create a new file in the `_posts` directory. The naming format for blog posts is `YYYY-MM-DD-title.md`, so you can name the file something like `2026-08-22-hello-world.md`. 
@@ -59,7 +63,8 @@ Commit and push your changes. Github Pages handles the build and deployment of y
 ## DNS Configuration
 To link your new blog to your custom domain, you'll need to configure the DNS settings in your domain registrar. I used Namecheap to buy my domain for about $12.
 
-To point your custom domain to your blog, add the following A records and CNAME record to your domain settings. 
+To point your custom domain to your blog, add the following A records and CNAME record to your domain settings. The full documenation for these configurations is available [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+
 
 | Type   |  Host  | Value          | TTL      |
 |--------|--------|----------------|----------|
@@ -67,14 +72,15 @@ To point your custom domain to your blog, add the following A records and CNAME 
 |A Record| @      |185.199.109.153 | Automatic|
 |A Record| @      |185.199.110.153 | Automatic|
 |A Record| @      |185.199.111.153 | Automatic|
-|CNAME   | www    |cydni.github.io | Automatic|
+|CNAME   | www    |username.github.io. | Automatic|
 
-The full documenation for these configurations is available [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+Change the url in `_config.yml`to your domain (i.e `www.your-domain.com`).
+
+In your project's _Settings > Pages_ page on Github, add your domain to the _Custom Domain_ section (i.e. `www.your-domain.com`). The value you enter should **exactly** match the value in the `CNAME` file in your project. Otherwise, you may have issues generating the TLS certificate needed for HTTPS. 
+
+Save your custom domain to kick of the DNS Check process. This is handled by Github Pages to make sure your DNS settings were configured properly. You can follow the status of the DNS check on Github.
+
+And now, you wait! It can take serveral hours for the DNS configurations to propagate. Go do the dishes, or fold that pile of clothes you've been ignoring. 
 
 
-
-- make sure github has www.domain.com (to match CNAME in project)
-- change url to www.domain.com
-
-- add config.yml
-- add section for profile pic and icon
+- add section for profile pic and icon + favicon
