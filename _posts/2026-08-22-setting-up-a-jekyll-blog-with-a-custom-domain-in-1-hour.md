@@ -78,9 +78,12 @@ Change the url in `_config.yml`to your domain (i.e `www.your-domain.com`).
 
 In your project's _Settings > Pages_ page on Github, add your domain to the _Custom Domain_ section (i.e. `www.your-domain.com`). The value you enter should **exactly** match the value in the `CNAME` file in your project. Otherwise, you may have issues generating the TLS certificate needed for HTTPS. 
 
-Save your custom domain to kick of the DNS Check process. This is handled by Github Pages to make sure your DNS settings were configured properly. You can follow the status of the DNS check on Github.
+Save your custom domain to kick off the DNS Check process. This is handled by Github Pages to make sure your DNS settings were configured properly. You can follow the status of the DNS check on Github.
 
 And now, you wait! It can take serveral hours for the DNS configurations to propagate. Go do the dishes, or fold that pile of clothes you've been ignoring. 
 
+After a few hours, you'll see the "DNS check successful" message and you'll be able to your blog at your custom domain. 
 
-- add section for profile pic and icon + favicon
+![DNS Success Check](/assets/img/github-dns-success-check.png)
+
+Aaaand you're done! The only thing left is to fill your blog with lots of interesting posts.
