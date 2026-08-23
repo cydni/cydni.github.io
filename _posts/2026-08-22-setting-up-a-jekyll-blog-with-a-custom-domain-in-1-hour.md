@@ -1,5 +1,5 @@
 ---
-title: "Setting Up a Jekyll Blog in 1 Hour"
+title: "Setting Up a Jekyll Blog With a Custom Domain in 1 Hour"
 date: 2026-08-22 12:00:00 -0500
 categories: [Jekyll, blog]
 tags: [Jekyll, blog]
@@ -23,11 +23,25 @@ Once Ruby and Jekyll are succesfully installed, open a terminal in your project 
 bundle install
 bundle execute jekyll serve
 ```
-These commands finish installing necessary dependencies, build your project, and serves it locally. This may take a minute or two to run so take a second to pat yourself on the back - the most tedious part of this process is behing you! 
+These commands finish installing necessary dependencies, build your project, and serves it locally. This may take a minute or two to run so take a second to pat yourself on the back - the most tedious part of this process is behind you! 
+
+When the commands finish executing, look for the local server address where your blog is hosted on your machine. It'll most likely be `http://127.0.0.1:4000/`. Open up that address in your browser, and you'll see your blog. Right now, it just the default template for whatever theme you chose earlier. It's time to give it a little character.
 
 ## Blog Customization
-- configure config.yaml
-- initial blog post
+In your local copy of the repo, open `_config.yml`. Change the title, tagline, and description to whatever you'd like for your blog. In the _social_ section, set your name and email. Set the url to `https://username.github.io`. 
+
+For your first blog post, create a new file in the `_posts` directory. The naming format for blog posts is `YYYY-MM-DD-title.md`, so you can name the file something like `2026-08-22-hello-world.md`. 
+
+Each blog post markdown file requires some metadata at the top of the file. Specify the post's title, date, categories, and tags in the following format.
+
+```markdown
+---
+title: "Hello World"
+date: 2026-08-22 12:00:00 -0500
+categories: [Hello World]
+tags: [Hello World]
+---
+```
 - profile pic (?)
 
 ## DNS Configuration
