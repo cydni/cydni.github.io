@@ -30,6 +30,10 @@ When the commands finish executing, look for the local server address where your
 ## Blog Customization
 Open your local copy of the project in your favorite IDE and open `_config.yml`. Change the title, tagline, and description to whatever you'd like for your blog. In the _social_ section, set your name and email. Set the url to `https://username.github.io`. 
 
+```yml
+
+```
+
 For your first blog post, create a new file in the `_posts` directory. The naming format for blog posts is `YYYY-MM-DD-title.md`, so you can name the file something like `2026-08-22-hello-world.md`. 
 
 Each blog post markdown file requires some metadata at the top of the file. Specify the post's title, date, categories, and tags in the metadata section, then add your post content to the file in markdown format.
@@ -53,6 +57,24 @@ Commit and push your changes. Github Pages handles the build and deployment of y
 
 
 ## DNS Configuration
-- a names and c names
+To link your new blog to your custom domain, you'll need to configure the DNS settings in your domain registrar. I used Namecheap to buy my domain for about $12.
+
+To point your custom domain to your blog, add the following A records and CNAME record to your domain settings. 
+
+| Type   |  Host  | Value          | TTL      |
+|--------|--------|----------------|----------|
+|A Record| @      |185.199.108.153 | Automatic|
+|A Record| @      |185.199.109.153 | Automatic|
+|A Record| @      |185.199.110.153 | Automatic|
+|A Record| @      |185.199.111.153 | Automatic|
+|CNAME   | www    |cydni.github.io | Automatic|
+
+The full documenation for these configurations is available [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+
+
+
 - make sure github has www.domain.com (to match CNAME in project)
 - change url to www.domain.com
+
+- add config.yml
+- add section for profile pic and icon
