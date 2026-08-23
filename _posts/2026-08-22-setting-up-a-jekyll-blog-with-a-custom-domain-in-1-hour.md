@@ -25,7 +25,9 @@ bundle execute jekyll serve
 ```
 These commands finish installing necessary dependencies, build your project, and serves it locally. This may take a minute or two to run so take a second to pat yourself on the back - the most tedious part of this process is behind you! 
 
-When the commands finish executing, look for the local server address where your blog is hosted on your machine. It'll most likely be `http://127.0.0.1:4000/`. Open up that address in your browser, and you'll see your blog. Right now, it just the default template for whatever theme you chose earlier. It's time to give it a little character.
+When the commands finish executing, look for the local server address where your blog is hosted on your machine. It'll most likely be `http://127.0.0.1:4000/`. Open up that address in your browser, and you'll see your blog. As you make changes to your project, your locally hosted blog will update automatically to reflect them.
+
+Right now, your blog is just the default template for whatever theme you chose earlier. It's time to give it a little character.
 
 ## Blog Customization
 Open your local copy of the project in your favorite IDE and open `_config.yml`. Change the title, tagline, and description to whatever you'd like for your blog. In the _social_ section, set your name and email. Set the url to `https://username.github.io`. 
@@ -59,9 +61,14 @@ Save the file and head back over to `http://127.0.0.1:4000/` (or wherever your b
 
 Commit and push your changes. Github Pages handles the build and deployment of your project. You can check the status of this workflow in the _Actions_ tab of your project on Github. Once the workflow completes successfully, head over to `username.github.io` in your browser. Congratulations, your blog is now publicly hosted and available to others.
 
+To change your avatar image, save the image you want to use in `assets/img/your-image.jpg`. Then update the configuration in `_config.yml` to match.
+
+```yml
+avatar: "/assets/img/your-image.jpg"
+```
 
 ## DNS Configuration
-To link your new blog to your custom domain, you'll need to configure the DNS settings in your domain registrar. I used Namecheap to buy my domain for about $12.
+To link your new blog to your custom domain, you'll need to configure the DNS settings in your domain registrar. I used Namecheap to buy my domain for about $12 for a year.
 
 To point your custom domain to your blog, add the following A records and CNAME record to your domain settings. The full documenation for these configurations is available [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
@@ -78,7 +85,7 @@ Change the url in `_config.yml`to your domain (i.e `www.your-domain.com`).
 
 In your project's _Settings > Pages_ page on Github, add your domain to the _Custom Domain_ section (i.e. `www.your-domain.com`). The value you enter should **exactly** match the value in the `CNAME` file in your project. Otherwise, you may have issues generating the TLS certificate needed for HTTPS. 
 
-Save your custom domain to kick off the DNS Check process. This is handled by Github Pages to make sure your DNS settings were configured properly. You can follow the status of the DNS check on Github.
+Save your custom domain to kick off the DNS Check process. This is handled by Github Pages to make sure your DNS settings are configured properly. You can follow the status of the DNS check on Github.
 
 And now, you wait! It can take serveral hours for the DNS configurations to propagate. Go do the dishes, or fold that pile of clothes you've been ignoring. 
 
