@@ -1,5 +1,5 @@
 ---
-title: "Setting Up a Jekyll Blog With a Custom Domain in 1 Hour"
+title: "Setting Up a Jekyll Blog With Custom Domain in 1 Hour"
 date: 2026-08-22 12:00:00 -0500
 categories: [Jekyll, blog]
 tags: [Jekyll, blog]
@@ -15,7 +15,7 @@ When you find a theme you like, fork the github repository into a new project. N
 ## Dependency Installation
 Install Ruby and Jekyll following the instructions in [this guide](https://jekyllrb.com/docs/installation/). 
 
-If you use the Chirpy theme like I did, install _v3.2.11_ instead of the latest version to avoid version mismatches when you try to build and serve your blog.
+If you use the Chirpy theme like I did, install _v3.2.11_ instead of the latest version to avoid version mismatches when you build and serve your blog.
 
 Once Ruby and Jekyll are succesfully installed, open a terminal in your project directory and run the following commands:
 
@@ -28,11 +28,11 @@ These commands finish installing necessary dependencies, build your project, and
 When the commands finish executing, look for the local server address where your blog is hosted on your machine. It'll most likely be `http://127.0.0.1:4000/`. Open up that address in your browser, and you'll see your blog. Right now, it just the default template for whatever theme you chose earlier. It's time to give it a little character.
 
 ## Blog Customization
-In your local copy of the repo, open `_config.yml`. Change the title, tagline, and description to whatever you'd like for your blog. In the _social_ section, set your name and email. Set the url to `https://username.github.io`. 
+Open your local copy of the project in your favorite IDE and open `_config.yml`. Change the title, tagline, and description to whatever you'd like for your blog. In the _social_ section, set your name and email. Set the url to `https://username.github.io`. 
 
 For your first blog post, create a new file in the `_posts` directory. The naming format for blog posts is `YYYY-MM-DD-title.md`, so you can name the file something like `2026-08-22-hello-world.md`. 
 
-Each blog post markdown file requires some metadata at the top of the file. Specify the post's title, date, categories, and tags in the following format.
+Each blog post markdown file requires some metadata at the top of the file. Specify the post's title, date, categories, and tags in the metadata section, then add your post content to the file in markdown format.
 
 ```markdown
 ---
@@ -41,8 +41,16 @@ date: 2026-08-22 12:00:00 -0500
 categories: [Hello World]
 tags: [Hello World]
 ---
+
+# Header 1
+Put the rest of your super interesting blog content here.
+
 ```
-- profile pic (?)
+
+Save the file and head back over to `http://127.0.0.1:4000/` (or wherever your blog is being served locally). Now you can see the effect of the changes you made to `_config.yml` and your first blog post! This is fantastic, but it's still only available on your machine. We want your blog to be available to the Internet so that everyone can ready all the cool stuff you're going to post on your blog.
+
+Commit and push your changes. Github Pages handles the build and deployment of your project. You can check the status of this workflow in the _Actions_ tab of your project on Github. Once the workflow completes successfully, head over to `username.github.io` in your browser. Congratulations, your blog is now publicly hosted and available to others.
+
 
 ## DNS Configuration
 - a names and c names
