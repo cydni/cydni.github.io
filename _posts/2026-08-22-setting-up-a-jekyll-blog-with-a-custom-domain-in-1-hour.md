@@ -21,7 +21,7 @@ Once Ruby and Jekyll are succesfully installed, open a terminal in your project 
 
 ```bash
 bundle install
-bundle execute jekyll serve
+bundle exec jekyll serve
 ```
 These commands finish installing necessary dependencies, build your project, and serves it locally. This may take a minute or two to run so take a second to pat yourself on the back - the most tedious part of this process is behind you! 
 
